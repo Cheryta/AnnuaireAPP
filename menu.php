@@ -22,7 +22,7 @@
             </div>
             <div id="rche"> 
               <input type="search" aria-label="Search">
-              <button type="submit" bg-dark>Search</button>
+              <button type="submit" bg-primary>Search</button>
             </div>
         </div>
       </nav>

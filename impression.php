@@ -3,25 +3,17 @@
        <meta charset="utf-8">
         <!-- importer le fichier de style -->
         <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
     </head>
-    <body>
-        <?php
-            include 'menu.php'
-         ?>
-         <div id="texte3">
+    <body onload="window.print()">
+      
+         <div id="texte3" text-center p-3>
             <p>Liste des articles </p>
         </div>
         
         <div id="container-fluid">
             <!-- zone de connexion -->
-            <div id="actionb">
-                <a type="button" class="btn btn-light" href="formulaire.php">
-                    <img src="./Images/plus.png" alt="" width="70" height="40">
-                </a>
-                <a type="button" class="btn btn-light" href="impression.php">
-                    <img src="./Images/imp.png" alt="" width="70" height="40">
-                </a>
-            </div>
+            
             <form action="insertion.php" method="POST"><br>
                 
                 <table class="table table bordered " border="1">
@@ -34,8 +26,6 @@
                         <th scope="col">PRIX TOTAL</th>
                         <th scope="col">DATE</th>
                         <th scope="col">LIEU DE PROVENANCE</th>
-                        <th scope="col">MODIFIER</th>
-                        <th scope="col">SUPPRIMER</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,8 +59,7 @@
                                 <td><?php echo $donnee['prixTotal']; ?></td>
                                 <td><?php echo $donnee['date']; ?></td>
                                 <td><?php echo $donnee['lieu']; ?></td>
-                                <td><a href='edit.php?id=<?php echo $donnee["codeArticle"]; ?>' type="button" class="btn btn-primary">Modifier</a></td>
-                                <td><a href='delete.php?id=<?php echo $donnee["codeArticle"]; ?>' onclick='return confirm("Etes-vous sûr ?")' type="button" class="btn btn-danger">Supprimer</a></td>
+                                
                             </tr>
 
                         <?php
@@ -85,5 +74,8 @@
         <div id="texte2">
             <p>Copyright@2022|Designed with by CIJ </p>
         </div>
+        <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+        <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     </body>
 </html>
