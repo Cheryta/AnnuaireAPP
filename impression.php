@@ -19,7 +19,6 @@
                 <table class="table table bordered " border="1">
                     <thead class="table-primary">
                         <tr>
-                        <th scope="col">CODE</th>
                         <th scope="col">LIBELLE</th>
                         <th scope="col">QUANTITE</th>
                         <th scope="col">PRIX UNITAIRE</th>
@@ -52,7 +51,6 @@
                         foreach ($data as $donnee) {
                         ?>
                             <tr>
-                                <td><?php echo $donnee['codeArticle']; ?></td>
                                 <td><?php echo $donnee['libelle']; ?></td>
                                 <td><?php echo $donnee['quantite']; ?></td>
                                 <td><?php echo $donnee['prixUnitaire']; ?></td>
@@ -71,11 +69,12 @@
             </form>
             <br><br>
         </div>
-        <div id="texte2">
-            <p>Copyright@2022|Designed with by CIJ </p>
-        </div>
+        
         <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
         <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
         <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+        <?php
+            include 'footer.php'
+         ?>
     </body>
 </html>

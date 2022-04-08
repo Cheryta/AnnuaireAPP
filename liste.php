@@ -24,10 +24,9 @@
             </div>
             <form action="insertion.php" method="POST"><br>
                 
-                <table class="table table bordered " border="1">
+                <table id="myTable" class="table table bordered " border="1" >
                     <thead class="table-primary">
                         <tr>
-                        <th scope="col">CODE</th>
                         <th scope="col">LIBELLE</th>
                         <th scope="col">QUANTITE</th>
                         <th scope="col">PRIX UNITAIRE</th>
@@ -62,7 +61,6 @@
                         foreach ($data as $donnee) {
                         ?>
                             <tr>
-                                <td><?php echo $donnee['codeArticle']; ?></td>
                                 <td><?php echo $donnee['libelle']; ?></td>
                                 <td><?php echo $donnee['quantite']; ?></td>
                                 <td><?php echo $donnee['prixUnitaire']; ?></td>
@@ -82,6 +80,28 @@
             </form>
             <br><br>
         </div>
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        }
+                        else {
+                            tr[i].style.display = "none";
+                        }
+                    }       
+                }
+            }
+        </script>
+
         <div id="texte2">
             <p>Copyright@2022|Designed with by CIJ </p>
         </div>

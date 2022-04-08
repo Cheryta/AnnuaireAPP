@@ -25,7 +25,7 @@
             <div id="container">
                 <!-- zone de connexion -->
             
-                <form action="insertion.php" method="POST" class="frm">
+                <form action="insertion.php" method="POST">
                     <div id="texte4">
                         <p>Ajouter un Article</p>
                     </div>
@@ -67,8 +67,8 @@
             </div>
         </div>
 
-        <div id="texte2">
-            <p>Copyright@2022|Designed with by CIJ </p>
-        </div>
+        <?php
+            include 'footer.php'
+         ?>
     </body>
 </html>

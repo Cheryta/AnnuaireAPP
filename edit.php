@@ -28,15 +28,15 @@
 <html>
   <head>
     <title>Modifier </title>
-    <link rel='stylesheet' href='style.css'>
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
   </head>
   <body>
     <div class='container'>
-      <?php flash('msg'); ?>
-      <div id="texte3">
-        <a href='liste.php'>Revenir à la liste</a>
-    </div>
-      <form method='post' action='<?php echo $_SERVER["REQUEST_URI"]; ?>' class='frm'>
+        <?php flash('msg'); ?>
+        <div id="texte3">
+            <a href='liste.php'>Revenir à la liste</a>
+        </div>
+        <form method='post' action='<?php echo $_SERVER["REQUEST_URI"]; ?>'>
             <div id="texte4">
                 <p>Modifier un Article</p>
             </div>
@@ -65,9 +65,11 @@
                 <option value="Oceannie">Oceanie</option>
             </select>
             <input type="submit" name='submit' value='Modifier' >
-      </form>
+        </form>
     </div>
-    
+    <?php
+            include 'footer.php'
+    ?> 
   </body>
 </html>
 <?php 

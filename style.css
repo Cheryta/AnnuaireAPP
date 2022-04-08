@@ -70,13 +70,7 @@ form {
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-#frm {
-    width: 70%;
-    padding: 20px;
-    border: 1px solid #f1f1f1;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
+
 /* Full-width inputs */
 input[type=text], input[type=password], input[type=number], input[type=date], select {
     width: 100%;
@@ -186,24 +180,4 @@ table tr th td {
 }
 .gallery .gallery-item:hover img {
     transform: scale(1.1);
-}
-.btn-blue{
-    border:none;
-    background:#3a74e8;
-    border:1px solid #3a74e8;
-    color:white;
-    padding:2px 15px;
-    border-radius:5px;
-    text-decoration:none;
-    font-size:14px;
-}
-.btn-red{
-    border:none;
-    background:#cf562d;
-    border:1px solid #cf562d;
-    color:white;
-    padding:2px 15px;
-    border-radius:5px;
-    text-decoration:none;
-    font-size:14px;
 }
